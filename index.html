@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나와 찰떡궁합인 트로트 성향 & 인생 명곡 찾기 테스트 - 시니어 라이프 포털</title>
+<meta name="description" content="5가지 간단한 음악 취향 질문으로 알아보는 나의 트로트 감성 유형과 맞춤형 힐링 명곡 추천 테스트입니다. 음악 치료와 뇌 건강 칼럼도 함께 확인하세요.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4970826371996884" crossorigin="anonymous"></script>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+    background-color: #f8f5f2;
+    color: #222;
+    margin: 0;
+    padding: 15px;
+    line-height: 1.75;
+  }
+  .quiz-box {
+    max-width: 680px;
+    margin: 15px auto 35px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    text-align: center;
+    border-top: 6px solid #e11d48;
+  }
+  .badge {
+    display: inline-block;
+    background: #ffe4e6;
+    color: #e11d48;
+    font-weight: 800;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  h1 { font-size: 26px; color: #111827; margin: 0 0 10px; word-break: keep-all; }
+  .desc { font-size: 16px; color: #4b5563; margin-bottom: 24px; }
+  .progress {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e11d48;
+    margin-bottom: 12px;
+  }
+  .q-title {
+    font-size: 21px;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 22px;
+    word-break: keep-all;
+    background: #fff1f2;
+    padding: 18px;
+    border-radius: 12px;
+  }
+  .ans-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    font-size: 17.5px;
+    font-weight: 700;
+    color: #1f2937;
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .ans-btn:hover {
+    border-color: #e11d48;
+    background: #fff1f2;
+  }
+  .result-box { display: none; }
+  .res-type { font-size: 25px; font-weight: 800; color: #e11d48; margin: 12px 0; }
+  .res-desc {
+    font-size: 16.5px;
+    color: #374151;
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .btn-Group { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .act-btn {
+    padding: 15px 22px;
+    font-size: 17px;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btn-retry { background: #e5e7eb; color: #1f2937; }
+  .btn-share { background: #fee500; color: #191919; }
+</style>
+</head>
+<body>
+
+<div class="quiz-box">
+  <span class="badge">🎤 7080 음악 심리 테스트</span>
+  <h1>나와 찰떡궁합인 트로트 감성 찾기</h1>
+  <p class="desc">5가지 질문으로 알아보는 나의 음악 성향과 힐링 명곡</p>
+
+  <div id="questionArea">
+    <div class="progress" id="progText">질문 1 / 5</div>
+    <div class="q-title" id="qText"></div>
+    <div id="ansList"></div>
+  </div>
+
+  <div id="resultArea" class="result-box">
+    <div style="font-size: 16px; font-weight: 700; color: #6b7280;">나의 트로트 음악 감성 유형은?</div>
+    <div class="res-type" id="resTitle"></div>
+    <div class="res-desc" id="resContent"></div>
+    <div class="btn-Group">
+      <button class="act-btn btn-retry" onclick="resetQuiz()">🔄 다시 테스트하기</button>
+      <button class="act-btn btn-share" onclick="shareResult()">💬 카톡으로 결과 공유하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 애드센스 승인용 상세 가이드 및 칼럼 섹션 -->
+<section style="max-width: 680px; margin: 30px auto; padding: 30px 24px; background: #ffffff; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: left;">
+  <h2 style="font-size: 21px; color: #be123c; border-bottom: 2px solid #e5e7eb; padding-bottom: 12px; margin-top: 0;">🎵 트로트와 음악 감상이 중장년층의 뇌 건강과 활력에 미치는 과학적 효과</h2>
+  <p style="font-size: 15.5px; color: #4b5563;">한국인의 삶과 애환을 담아낸 대중음악 장르인 트로트(Trot)는 최근 세대를 아우르는 국민 음악으로 자리 잡았습니다. 특히 중장년 및 시니어 세대에게 익숙한 멜로디와 공감 가는 가사를 지닌 트로트를 감상하고 따라 부르는 활동은 단순한 여가 생활을 넘어 뇌신경 과학 및 노인 심리학 측면에서 매우 뛰어난 건강 증진 효과를 발휘합니다.</p>
+
+  <h3 style="font-size: 18px; color: #1f2937; margin-top: 26px;">1. 해마(Hippocampus) 자극을 통한 장기 기억력 활성화와 치매 예방</h3>
+  <p style="font-size: 15.5px; color: #4b5563;">인간의 뇌에서 기억과 학습을 담당하는 기관인 '해마'는 청각 피질 및 감정 중추인 편도체와 밀접하게 연결되어 있습니다. 젊은 시절 즐겨 듣던 추억의 가요나 정겨운 트로트 선율을 들으면 뇌의 해마가 즉각적으로 반응하며 당시의 기억과 감정을 생생하게 불러일으킵니다. 음악 치료(Music Therapy)에서는 이를 '회상 요법'의 핵심 도구로 활용하며, 노래 가사를 외워 부르고 박자를 맞추는 과정은 전두엽과 측두엽의 혈류량을 동시에 증가시켜 인지 기능 저하와 치매를 예방하는 데 탁월한 도움을 줍니다.</p>
+
+  <h3 style="font-size: 18px; color: #1f2937; margin-top: 26px;">2. 스트레스 호르몬 감소 및 심폐 기능 강화</h3>
+  <p style="font-size: 15.5px; color: #4b5563;">흥겨운 4분의 4박자나 구성진 2분의 2박자 트로트 리듬에 맞춰 몸을 가볍게 흔들거나 노래를 부르면 체내 스트레스 호르몬인 <strong>코르티솔(Cortisol)</strong> 수치가 유의미하게 감소합니다. 동시에 뇌의 보상 회로가 자극받아 기분을 고양시키는 신경전달물질인 <strong>도파민(Dopamine)</strong>과 천연 진통제 역할을 하는 <strong>엔도르핀(Endorphin)</strong>이 분비됩니다. 또한 노래를 부를 때 자연스럽게 이루어지는 복식 호흡은 폐활량을 늘리고 자율신경계의 균형을 잡아주어 고혈압 및 심혈관 건강 관리에도 긍정적인 영향을 미칩니다.</p>
+
+  <h3 style="font-size: 18px; color: #1f2937; margin-top: 26px;">3. 일상 속에서 즐기는 건강한 음악 감상 수칙</h3>
+  <ul style="font-size: 15.5px; color: #4b5563; padding-left: 20px;">
+    <li style="margin-bottom: 10px;"><strong>적정 볼륨 유지로 청력 보호하기:</strong> 이어폰을 사용할 때는 최대 음량의 60% 이하로 설정하고, 가급적 스피커를 통해 공간감 있게 음악을 감상하는 것이 노화성 난청 예방에 좋습니다.</li>
+    <li style="margin-bottom: 10px;"><strong>가사 음미하며 따라 부르기:</strong> 단순히 배경음악으로 틀어놓기보다 새로운 곡의 가사를 눈으로 읽고 외워 직접 소리 내어 부르면 두뇌 회전 효과가 배가됩니다.</li>
+    <li style="margin-bottom: 10px;"><strong>지인들과 좋은 음악 공유하기:</strong> 마음에 울림을 주는 명곡이나 재미있는 음악 취향 테스트 결과를 친구, 가족과 나누며 대화 소재로 삼으면 정서적 활력이 크게 높아집니다.</li>
+  </ul>
+
+  <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
+    <a href="https://jongyhak.github.io/" style="display: inline-block; padding: 12px 22px; background: #1a56db; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 15px;">🏠 시니어 & 라이프 메인 포털 홈으로 이동</a>
+  </div>
+</section>
+
+<script>
+const questions = [
+  {
+    q: "1. 기분 좋은 주말 아침, 창문을 열며 듣고 싶은 음악 분위기는?",
+    a: [
+      { text: "마음이 차분해지고 깊은 여운이 남는 감성 발라드풍 트로트", type: "emotional" },
+      { text: "어깨가 절로 들썩이고 에너지가 솟구치는 신나는 댄스 트로트", type: "energetic" },
+      { text: "구수한 꺾기와 깊은 연륜이 느껴지는 정통 트로트", type: "classic" }
+    ]
+  },
+  {
+    q: "2. 노래를 들을 때 내가 가장 중요하게 생각하는 포인트는?",
+    a: [
+      { text: "내 인생 이야기처럼 가슴을 울리는 시적인 가사와 따뜻한 목소리", type: "emotional" },
+      { text: "한 번만 들어도 귀에 쏙 들어오는 경쾌한 리듬과 시원한 고음", type: "energetic" },
+      { text: "세월의 깊이가 묻어나는 탄탄한 발성과 정통 멜로디", type: "classic" }
+    ]
+  },
+  {
+    q: "3. 친한 지인들과 모임이나 여행을 갔을 때 나의 스타일은?",
+    a: [
+      { text: "조용히 미소 지으며 사람들의 이야기를 따뜻하게 경청하는 편이다", type: "emotional" },
+      { text: "박수 치고 호응하며 모임의 흥과 분위기를 주도하는 편이다", type: "energetic" },
+      { text: "묵직하고 든든하게 중심을 잡아주며 깊이 있는 대화를 나눈다", type: "classic" }
+    ]
+  },
+  {
+    q: "4. 마음이 울적하거나 스트레스가 쌓였을 때 나만의 해소법은?",
+    a: [
+      { text: "잔잔한 위로가 되는 노래를 들으며 호젓하게 산책을 즐긴다", type: "emotional" },
+      { text: "신나는 리듬의 음악을 틀어놓고 몸을 움직이거나 따라 부른다", type: "energetic" },
+      { text: "추억이 담긴 옛 명곡을 찾아 들으며 지나온 세월을 되돌아본다", type: "classic" }
+    ]
+  },
+  {
+    q: "5. 내가 생각하는 최고의 명곡이란 어떤 노래인가요?",
+    a: [
+      { text: "들을 때마다 눈시울이 붉어지고 마음을 포근하게 안아주는 노래", type: "emotional" },
+      { text: "근심 걱정을 단숨에 날려버리고 삶의 활력을 충전해 주는 노래", type: "energetic" },
+      { text: "수십 년이 흘러도 변치 않는 정통의 맛과 품격이 살아있는 노래", type: "classic" }
+    ]
+  }
+];
+
+const results = {
+  emotional: {
+    title: "🌟 가슴을 울리는 '명품 감성 힐링파'",
+    desc: "<strong>[성향 분석]</strong><br>당신은 따뜻한 공감 능력과 깊이 있는 감수성을 지닌 분입니다. 화려한 기교보다는 진심이 담긴 목소리와 서정적인 가사에 큰 울림을 느끼며, 주변 사람들에게 편안한 위로를 주는 온화한 매력을 가지고 계십니다.<br><br><strong>🎧 추천 음악 스타일 & 테마:</strong><br>• 서정적인 팝 발라드풍 성인가요 및 감성 트로트<br>• 추천 감상 테마: '별빛 같은 나의 사랑아', '이제 나만 믿어요', '바램' 등 마음을 어루만지는 따뜻한 힐링 명곡"
+  },
+  energetic: {
+    title: "⚡ 청춘의 활력이 넘치는 '해피 에너지파'",
+    desc: "<strong>[성향 분석]</strong><br>당신은 나이를 잊은 열정과 긍정적인 에너지를 뿜어내는 분위기 메이커입니다! 우울하거나 처지는 것을 싫어하며, 경쾌한 리듬과 시원시원한 가창력이 돋보이는 음악을 통해 일상의 스트레스를 유쾌하게 날려버리는 지혜를 지니고 계십니다.<br><br><strong>🎧 추천 음악 스타일 & 테마:</strong><br>• 흥겨운 리듬의 세미 트로트 및 댄스 트로트<br>• 추천 감상 테마: '무조건', '찐이야', '아모르 파티' 등 듣기만 해도 어깨가 들썩이는 활력 충전 명곡"
+  },
+  classic: {
+    title: "👑 깊은 연륜과 품격의 '정통 명작파'",
+    desc: "<strong>[성향 분석]</strong><br>당신은 흔들리지 않는 중심과 깊은 인생의 연륜을 지닌 품격 있는 분입니다. 가볍게 소비되는 유행가보다는 시대를 초월해 사랑받는 정통 트로트의 구수한 꺾기와 묵직한 울림을 진정으로 음미할 줄 아는 수준 높은 음악 애호가이십니다.<br><br><strong>🎧 추천 음악 스타일 & 테마:</strong><br>• 깊은 한과 흥이 어우러진 정통 트로트 명곡<br>• 추천 감상 테마: '테스형!', '고맙소', '안동역에서' 등 인생의 철학과 깊은 성량이 어우러진 정통 명곡"
+  }
+};
+
+let step = 0;
+let scores = { emotional: 0, energetic: 0, classic: 0 };
+
+function renderQuestion() {
+  const cur = questions[step];
+  document.getElementById('progText').innerText = `질문 ${step + 1} / ${questions.length}`;
+  document.getElementById('qText').innerText = cur.q;
+  const list = document.getElementById('ansList');
+  list.innerHTML = '';
+  cur.a.forEach(item => {
+    const btn = document.createElement('button');
+    btn.className = 'ans-btn';
+    btn.innerText = item.text;
+    btn.onclick = () => selectAnswer(item.type);
+    list.appendChild(btn);
+  });
+}
+
+function selectAnswer(type) {
+  scores[type]++;
+  step++;
+  if (step < questions.length) {
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById('questionArea').style.display = 'none';
+  document.getElementById('resultArea').style.display = 'block';
+  let best = 'emotional';
+  if (scores.energetic > scores[best]) best = 'energetic';
+  if (scores.classic > scores[best]) best = 'classic';
+  document.getElementById('resTitle').innerText = results[best].title;
+  document.getElementById('resContent').innerHTML = results[best].desc;
+}
+
+function resetQuiz() {
+  step = 0;
+  scores = { emotional: 0, energetic: 0, classic: 0 };
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('questionArea').style.display = 'block';
+  renderQuestion();
+}
+
+function shareResult() {
+  const title = document.getElementById('resTitle').innerText;
+  const text = `🎤 나의 트로트 감성 테스트 결과:\n[${title}]\n\n👉 나도 테스트 해보기: https://jongyhak.github.io/trot-test/`;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("✅ 결과가 복사되었습니다! 카카오톡 채팅방에 '붙여넣기' 하여 지인들과 공유해 보세요.");
+  });
+}
+
+renderQuestion();
+</script>
+</body>
+</html>
